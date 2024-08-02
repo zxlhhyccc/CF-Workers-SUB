@@ -93,6 +93,8 @@ export default {
 				订阅格式 = 'clash';
 			} else if (userAgent.includes('sing-box') || userAgent.includes('singbox') || ( (url.searchParams.has('sb') || url.searchParams.has('singbox')) && !userAgent.includes('subconverter'))){
 				订阅格式 = 'singbox';
+			} else if (userAgent.includes('hysteria2') || userAgent.includes('hysteria2') || ( (url.searchParams.has('hy2') || url.searchParams.has('hysteria2')) && !userAgent.includes('subconverter'))){
+				订阅格式 = 'singbox';
 			} else if (userAgent.includes('surge') || ( url.searchParams.has('surge') && !userAgent.includes('subconverter'))){
 				订阅格式 = 'surge';
 			}
@@ -110,6 +112,8 @@ export default {
 				追加UA = 'clash';
 			} else if(url.searchParams.has('singbox')){
 				追加UA = 'singbox';
+			} else if(url.searchParams.has('hysteria2')){
+				追加UA = 'hysteria2';
 			} else if(url.searchParams.has('surge')){
 				追加UA = 'surge';
 			}
@@ -207,6 +211,8 @@ export default {
 			} else if (订阅格式 == 'clash'){
 				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=clash&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
 			} else if (订阅格式 == 'singbox'){
+				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=singbox&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
+			} else if (订阅格式 == 'hysteria2'){
 				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=singbox&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
 			} else if (订阅格式 == 'surge'){
 				subconverterUrl = `${subProtocol}://${subconverter}/sub?target=surge&url=${encodeURIComponent(订阅转换URL)}&insert=false&config=${encodeURIComponent(subconfig)}&emoji=true&list=false&tfo=false&scv=true&fdn=false&sort=false&new_name=true`;
