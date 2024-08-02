@@ -94,7 +94,7 @@ export default {
 			} else if (userAgent.includes('sing-box') || userAgent.includes('singbox') || ( (url.searchParams.has('sb') || url.searchParams.has('singbox')) && !userAgent.includes('subconverter'))){
 				订阅格式 = 'singbox';
 			} else if (userAgent.includes('hysteria2') || userAgent.includes('hysteria2') || ( (url.searchParams.has('hy2') || url.searchParams.has('hysteria2')) && !userAgent.includes('subconverter'))){
-				订阅格式 = 'singbox';
+				订阅格式 = 'hysteria2';
 			} else if (userAgent.includes('surge') || ( url.searchParams.has('surge') && !userAgent.includes('subconverter'))){
 				订阅格式 = 'surge';
 			}
